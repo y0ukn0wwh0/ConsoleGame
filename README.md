@@ -1,13 +1,15 @@
 # Project
 
-### PCB
+### Inicial test build
 
-![pcb](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb.png)
-
-### Arduboy test build
-
-![schem](https://github.com/y0ukn0wwh0/projeto/blob/main/schem.jpg)
+![arduino](https://github.com/y0ukn0wwh0/projeto/blob/main/arduino.jfif)
 
 ### Schematic
 
-![schem2](https://github.com/y0ukn0wwh0/projeto/blob/main/schem2.png)
+![schematic](https://github.com/y0ukn0wwh0/projeto/blob/main/schematic.png)
+
+### PCB (rev. 1)
+
+![pcb](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb.png)
+![pcb_3d_front](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb_3d_front.png)
+![pcb_3d_back](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb_3d_back.png)
