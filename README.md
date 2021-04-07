@@ -6,17 +6,11 @@ In this current phase of development we have established the following thematics
 - PCB main board developed by the team, to give the console a shape and to connect the following components:
 
 > Arduino Nano;
-
 > 0.96" OLED screen;
-
 > 6 buttons;
-
 > Buzzer;
-
 > TP4056 lithium battery charging module;
-
 > 90mAh LiPo battery;
-
 > RC-522 RFID module;
 
 
