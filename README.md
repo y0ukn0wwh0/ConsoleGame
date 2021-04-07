@@ -1,7 +1,6 @@
 # Project
 
 Our goal is to create an arduino-powered mini console that plays a virtual pet game, also developed by the team.
-
 In this current phase of development we have established the following thematics:
 - PCB main board developed by the team, to give the console a shape and to connect the following components:
 
@@ -23,17 +22,3 @@ In this current phase of development we have established the following thematics
 - RFID implementation (sensor and tag) to randomize events or let players fight which eachother's pets;
 
 The concepts presented here are still rough ideas, they can and will be changed in the future, to match the team's ideas.
-
-#### Inicial test build
-
-![arduino](https://github.com/y0ukn0wwh0/projeto/blob/main/arduino.jfif)
-
-#### Schematic
-
-![schematic](https://github.com/y0ukn0wwh0/projeto/blob/main/schematic.png)
-
-#### PCB (rev. 1)
-
-![pcb](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb.png)
-![pcb_3d_front](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb_3d_back.png)
-![pcb_3d_back](https://github.com/y0ukn0wwh0/projeto/blob/main/pcb_3d_front.png)
