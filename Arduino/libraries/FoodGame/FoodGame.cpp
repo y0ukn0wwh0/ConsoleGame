@@ -1,16 +1,13 @@
 #include "Arduino.h"
 #include "Arduboy2.h"
 #include "FoodGame.h"
-
-const uint8_t PROGMEM _apple[] = {B01110000, B11111000, B11111100, B11111010, B01110000};
-
-FoodGame::FoodGame(){}
+#include "game_sprites.c"
 
 FoodGame::FoodGame(Arduboy2 arduboy)
 {
   _arduboy = arduboy;
-  _player = Rect(_arduboy.width()/2, _arduboy.height() - 10, 10, 10);
-  _fruitSize = 2;
+  _player = Rect(_arduboy.width()/2, _arduboy.height() - 16, 16, 16);
+  _fruitSize = 8;
   reset();
 }
 
@@ -27,7 +24,8 @@ void FoodGame::buttonsPressed()
 
 void FoodGame::drawPlayer()
 {
-  _arduboy.fillRect(_player.x, _player.y, _player.width, _player.height, WHITE);
+  //_arduboy.fillRect(_player.x, _player.y, _player.width, _player.height, WHITE);
+  _arduboy.drawBitmap(_player.x, _player.y, mandrake, _player.width, _player.height, WHITE);
   if(_player.x >= _arduboy.width()) _player.x -= _arduboy.width();
   if(_player.x + _player.width <= 0) _player.x += _arduboy.width();
 }
@@ -35,25 +33,25 @@ void FoodGame::drawPlayer()
 void FoodGame::spawnFruit(){
   if(millis() - _startTime > _timeInterval){
     int idx = 0;
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 10; i++){
       if(_fruits[i].x == 0){
         idx = i;
         break;
       }
     }
 
-    _fruits[idx].x = random(_fruitSize, _arduboy.width()-_fruitSize);
-    _fruits[idx].y = -3;
+    _fruits[idx].x = random(_fruitSize/2, _arduboy.width()-_fruitSize/2);
+    _fruits[idx].y = -4;
 	_timeInterval -= 50;
     _startTime = millis();
   }
 }
 
 void FoodGame::drawFruit(){
-  for(int i = 0; i < 5; i++){
+  for(int i = 0; i < 10; i++){
     if(_fruits[i].x != 0){
       //_arduboy.fillCircle(_fruits[i].x, _fruits[i].y, _fruitSize, WHITE);
-	  _arduboy.drawBitmap(_fruits[i].x - 2, _fruits[i].y - 4, _apple, 5, 8, WHITE);
+	  _arduboy.drawBitmap(_fruits[i].x - 4, _fruits[i].y - 7, apple, 8, 8, WHITE);
       _fruits[i].y += 2;
 
       if(_arduboy.collide(_fruits[i], _player)){
@@ -97,7 +95,7 @@ void FoodGame::reset(){
   _startTime = 0;
   _gameOver = false;
   _timeInterval = 2000;
-  for(int i = 0; i < 5; i++){
+  for(int i = 0; i < 10; i++){
     _fruits[i].x = 0;
   }
 }

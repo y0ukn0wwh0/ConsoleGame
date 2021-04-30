@@ -7,7 +7,6 @@
 class FoodGame
 {
   public:
-	FoodGame();
     FoodGame(Arduboy2 arduboy);
     void gameLoop();
 	void reset();
