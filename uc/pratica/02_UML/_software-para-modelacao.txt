@@ -1,0 +1,6 @@
+- open-source
+https://www.draw.io/
+http://argouml.tigris.org/
+
+- já foi open-source!
+http://astah.net/student-license-request
