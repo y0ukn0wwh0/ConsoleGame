@@ -1,7 +1,10 @@
 #include "Arduino.h"
 #include "Arduboy2.h"
 #include "FoodGame.h"
-#include "game_sprites.c"
+
+const uint8_t apple[] PROGMEM = {
+0x18, 0x3c, 0x7d, 0x3b, 0x74, 0x3c, 0x18, 0x00
+};
 
 FoodGame::FoodGame(Arduboy2 arduboy)
 {
@@ -22,10 +25,10 @@ void FoodGame::buttonsPressed()
   }
 }
 
-void FoodGame::drawPlayer()
+void FoodGame::drawPlayer(uint8_t const animal[])
 {
   //_arduboy.fillRect(_player.x, _player.y, _player.width, _player.height, WHITE);
-  _arduboy.drawBitmap(_player.x, _player.y, mandrake, _player.width, _player.height, WHITE);
+  _arduboy.drawBitmap(_player.x, _player.y, animal, _player.width, _player.height, WHITE);
   if(_player.x >= _arduboy.width()) _player.x -= _arduboy.width();
   if(_player.x + _player.width <= 0) _player.x += _arduboy.width();
 }
@@ -71,11 +74,11 @@ void FoodGame::printCentered(int x, int y, String text){
   _arduboy.print(text);
 }
 
-void FoodGame::gameLoop(){
+void FoodGame::gameLoop(uint8_t const animal[]){
   buttonsPressed();
   
   if(!_gameOver){
-    drawPlayer();
+    drawPlayer(animal);
     spawnFruit();
     drawFruit();
   }else{

@@ -1,13 +1,15 @@
 #include "Arduino.h"
 #include "Arduboy2.h"
 #include "DanceGame.h"
-#include "dance_sprites.c"
+#include "Font3x5.h"
+//#include "dance_sprites.c"
 
 uint8_t _possibleButtons[] = {LEFT_BUTTON, RIGHT_BUTTON, UP_BUTTON, DOWN_BUTTON};
 
-DanceGame::DanceGame(Arduboy2 arduboy)
+DanceGame::DanceGame(Arduboy2 arduboy, Font3x5 font)
 {
   _arduboy = arduboy;
+  _font = font;
   reset();
 }
 
@@ -32,28 +34,29 @@ void DanceGame::changeButton(){
   }
 }
 
-void DanceGame::buttonToImg(uint8_t button){
+void DanceGame::buttonToImg(uint8_t button, uint8_t const animal[]){
   switch(button){
     case LEFT_BUTTON:
-        _arduboy.drawBitmap(_arduboy.width()/2 - 8, _arduboy.height()/2, mandrake_left, 16, 16, WHITE);
+        //_arduboy.drawBitmap(_arduboy.width()/2 - 8, _arduboy.height()/2, mandrake_left, 16, 16, WHITE);
         drawArrow(_arduboy.width()/2 - 12, _arduboy.height()/2 + 8, 0);
         break;
     case RIGHT_BUTTON:
-        _arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_right, 16, 16, WHITE);
+        //_arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_right, 16, 16, WHITE);
         drawArrow(_arduboy.width() / 2 + 12, _arduboy.height() / 2 + 8, 1);
         break;
     case UP_BUTTON:
-        _arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_up, 16, 16, WHITE);
+        //_arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_up, 16, 16, WHITE);
         drawArrow(_arduboy.width() / 2, _arduboy.height() / 2 - 4, 2);
         break;
     case DOWN_BUTTON:
-        _arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_down, 16, 16, WHITE);
+        //_arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_down, 16, 16, WHITE);
         drawArrow(_arduboy.width() / 2, _arduboy.height() / 2 + 20, 3);
         break;
-    default:
-        _arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_standing, 16, 16, WHITE);
-        break;
+    //default:
+        //_arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, mandrake_standing, 16, 16, WHITE);
+        //break;
   }
+  _arduboy.drawBitmap(_arduboy.width() / 2 - 8, _arduboy.height() / 2, animal, 16, 16, WHITE);
 }
 
 void DanceGame::checkButtonsPressed(){
@@ -90,24 +93,24 @@ void DanceGame::checkButtonsPressed(){
 }
 
 void DanceGame::printCentered(uint8_t x, uint8_t y, String text){
-  uint8_t newX = x - (text.length() * 6)/2;
-  _arduboy.setCursor(newX, y);
-  _arduboy.print(text);
+  uint8_t newX = x - (text.length() * 4)/2;
+  _font.setCursor(newX, y);
+  _font.print(text);
 }
 
-void DanceGame::gameLoop(){
+void DanceGame::gameLoop(uint8_t const animal[]){
   _arduboy.pollButtons();
   
   if(!_gameOver){
     if(_showSequence){
       printCentered(_arduboy.width()/2, 10, "WATCH CLOSELY");
       if (_showButton)
-          buttonToImg(_sequence[_idxR]);
+          buttonToImg(_sequence[_idxR], animal);
       changeButton();
     }else{
       checkButtonsPressed();
       printCentered(_arduboy.width()/2, 10, "REPEAT THE DANCE");
-      buttonToImg(_btnPressed);
+      buttonToImg(_btnPressed, animal);
     }
   }else{
     printCentered(_arduboy.width()/2, 10, "GAMEOVER");
