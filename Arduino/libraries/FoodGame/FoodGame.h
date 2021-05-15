@@ -7,9 +7,8 @@
 class FoodGame
 {
   public:
-	FoodGame();
     FoodGame(Arduboy2 arduboy);
-    void gameLoop();
+    void gameLoop(uint8_t const animal[]);
 	void reset();
   private:
     Arduboy2 _arduboy;
@@ -22,7 +21,7 @@ class FoodGame
 	bool _gameOver;
 	short _timeInterval;
 	void buttonsPressed();
-	void drawPlayer();
+	void drawPlayer(uint8_t const animal[]);
 	void spawnFruit();
 	void drawFruit();
 	void printCentered(int x, int y, String text);
