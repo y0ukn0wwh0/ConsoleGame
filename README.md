@@ -1,4 +1,6 @@
-# Project
+# OUTDATED
+
+## Project
 
 Our goal is to create an arduino-powered mini console that plays a virtual pet game, also developed by the team.
 In this current phase of development we have established the following thematics:
