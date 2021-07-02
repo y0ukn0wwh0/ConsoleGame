@@ -1,0 +1,284 @@
+{
+  "uuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+  "path": "Offline/rev.1- projecto",
+  "name": "rev.1- projecto",
+  "content": "",
+  "created_at": "2021-06-05 15:26:52",
+  "updated_at": "2021-06-22 16:41:40",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "d783e0813db240172405259a5d8a0e25",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "fee3186e847b42ecb0244c6d4d6aaef8": 1,
+        "c9bcd71204854866a129a5264511c0b4": 1,
+        "e16e1c1e95e7463297af4f946c8959d5": 3,
+        "17019dc18298405695eedca2a9b49170": 1,
+        "0c9fd5922ac04fc28ac67e1e694197cb": 1,
+        "5273d6d4eed4434098d70992a7194b96": 1,
+        "2dcd9fa5386049ec861bb4c674a255f4": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "BUZZER",
+          1,
+          "BUZZER-12MM",
+          "SG1",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "d2a010dcc0484ccc83d9fed7def4a156",
+            "uuid": "0c9fd5922ac04fc28ac67e1e694197cb"
+          }
+        ],
+        [
+          "EXTRA_PINS",
+          1,
+          "EXTRA_PINS_FOOTPRINT",
+          "EXTRA",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "be054f648a3940c1a8ff5b80337d5f18",
+            "uuid": "2dcd9fa5386049ec861bb4c674a255f4"
+          }
+        ],
+        [
+          "0.96\" OLED",
+          1,
+          "0.96 OLED",
+          "OLED",
+          {
+            "BOM_Manufacturer": "",
+            "BOM_Manufacturer Part": "",
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "puuid": "f03a17ff6cc643f5ba3d69d2ee8d15b5",
+            "uuid": "5273d6d4eed4434098d70992a7194b96"
+          }
+        ],
+        [
+          "SW_SLIDE",
+          1,
+          "SLIDE_SWITCH_SMD",
+          "SLIDER",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "88c818c2dc174221a9f400915c0d7604",
+            "uuid": "17019dc18298405695eedca2a9b49170"
+          }
+        ],
+        [
+          "S2B-PH-SM4-TB(LF)(SN)",
+          1,
+          "CONN-SMD_P2.00_S2B-PH-SM4-TB-LF-SN",
+          "JST_INPUT",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C295747",
+            "BOM_Manufacturer": "JST Sales America",
+            "BOM_Manufacturer Part": "S2B-PH-SM4-TB(LF)(SN)",
+            "puuid": "a54eec112d4e47d8b8028fdda8c2c5b8",
+            "uuid": "c9bcd71204854866a129a5264511c0b4"
+          }
+        ],
+        [
+          "KSR251GLFS",
+          3,
+          "KEY-SMD_2P-L6.0-W3.8-P7.30-L",
+          "SWC,SWB,SWA",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C221790",
+            "BOM_Manufacturer": "C&K",
+            "BOM_Manufacturer Part": "KSR251GLFS",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "e3efd6e96a9b4378ac182a1e4a101e7f",
+            "uuid": "e16e1c1e95e7463297af4f946c8959d5"
+          }
+        ],
+        [
+          "Arduino_Nano_Header",
+          1,
+          "DIP-30_L43.18-W15.24-ARDUINONANO",
+          "ARDUINO",
+          {
+            "BOM_Manufacturer Part": "",
+            "puuid": "0476c63fa99e4a998187e5a274bdf1f1",
+            "uuid": "fee3186e847b42ecb0244c6d4d6aaef8"
+          }
+        ]
+      ],
+      "updateTime": 1624376500,
+      "createTime": 1622906737,
+      "histories": [],
+      "created_at": "2021-06-05 16:25:37",
+      "updated_at": "2021-06-22 16:41:40"
+    },
+    {
+      "uuid": "afb202c2e8bcfba5798f5bbba34762fb",
+      "puuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+      "title": "PCB_rev.1- projecto copy",
+      "filename": "PCB_rev.1- projecto copy.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "8061105e14ee42f18bdc4f6e1b033a2b": 2,
+        "afc8a776dde149c2be2c062426a8b5ec": 3,
+        "f79d2521b7a54ac28a1b1c489d8f34a6": 1,
+        "a54eec112d4e47d8b8028fdda8c2c5b8": 1,
+        "0476c63fa99e4a998187e5a274bdf1f1": 1,
+        "9e46cdb4853b4b3ba938754843ad9128": 1
+      },
+      "BOM": [],
+      "updateTime": 1623015919,
+      "createTime": 1623015919,
+      "histories": [],
+      "created_at": "2021-06-06 22:45:19",
+      "updated_at": "2021-06-06 22:45:19"
+    },
+    {
+      "uuid": "3a5f90f681524642ca7984399a5d480c",
+      "puuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+      "title": "PCB_rev.1- projecto",
+      "filename": "PCB_rev.1- projecto.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "9e46cdb4853b4b3ba938754843ad9128": 1,
+        "6821ceeb11404b41a22e096b8a0d9eba": 1,
+        "8061105e14ee42f18bdc4f6e1b033a2b": 1,
+        "c71ef1dd1e0d4044b87ad26779ccc230": 3,
+        "a54eec112d4e47d8b8028fdda8c2c5b8": 1,
+        "0476c63fa99e4a998187e5a274bdf1f1": 1,
+        "be054f648a3940c1a8ff5b80337d5f18": 1,
+        "ecc88121c1794021935b46e3086654bd": 1
+      },
+      "BOM": [],
+      "updateTime": 1623238915,
+      "createTime": 1623016349,
+      "histories": [],
+      "created_at": "2021-06-06 22:52:29",
+      "updated_at": "2021-06-09 12:41:55"
+    },
+    {
+      "uuid": "da68952a7f8c36273320c79fa61ad717",
+      "puuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+      "title": "PCB_rev.1- projecto_2",
+      "filename": "PCB_rev.1- projecto_2.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "88c818c2dc174221a9f400915c0d7604": 1,
+        "0476c63fa99e4a998187e5a274bdf1f1": 1,
+        "be054f648a3940c1a8ff5b80337d5f18": 1,
+        "f03a17ff6cc643f5ba3d69d2ee8d15b5": 1,
+        "e3efd6e96a9b4378ac182a1e4a101e7f": 3,
+        "d2a010dcc0484ccc83d9fed7def4a156": 1,
+        "a54eec112d4e47d8b8028fdda8c2c5b8": 1
+      },
+      "BOM": [],
+      "updateTime": 1623791340,
+      "createTime": 1623768904,
+      "histories": [],
+      "created_at": "2021-06-15 15:55:04",
+      "updated_at": "2021-06-15 22:09:00"
+    },
+    {
+      "uuid": "41eede9fb727af07f1dc4be23915b10f",
+      "puuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+      "title": "PCB_rev.1- projecto_3",
+      "filename": "PCB_rev.1- projecto_3.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "88c818c2dc174221a9f400915c0d7604": 1,
+        "a54eec112d4e47d8b8028fdda8c2c5b8": 1,
+        "0476c63fa99e4a998187e5a274bdf1f1": 1,
+        "be054f648a3940c1a8ff5b80337d5f18": 1,
+        "f03a17ff6cc643f5ba3d69d2ee8d15b5": 1,
+        "e3efd6e96a9b4378ac182a1e4a101e7f": 3,
+        "d2a010dcc0484ccc83d9fed7def4a156": 1
+      },
+      "BOM": [],
+      "updateTime": 1623793438,
+      "createTime": 1623771349,
+      "histories": [],
+      "created_at": "2021-06-15 16:35:49",
+      "updated_at": "2021-06-15 22:43:58"
+    },
+    {
+      "uuid": "4a4e033a9000a151c92121cb47b6048e",
+      "puuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+      "title": "PCB_rev.1- projecto_4",
+      "filename": "PCB_rev.1- projecto_4.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "e3efd6e96a9b4378ac182a1e4a101e7f": 3,
+        "88c818c2dc174221a9f400915c0d7604": 1,
+        "a54eec112d4e47d8b8028fdda8c2c5b8": 1,
+        "0476c63fa99e4a998187e5a274bdf1f1": 1,
+        "d2a010dcc0484ccc83d9fed7def4a156": 1,
+        "f03a17ff6cc643f5ba3d69d2ee8d15b5": 1,
+        "be054f648a3940c1a8ff5b80337d5f18": 1
+      },
+      "BOM": [],
+      "updateTime": 1623788669,
+      "createTime": 1623787897,
+      "histories": [],
+      "created_at": "2021-06-15 21:11:37",
+      "updated_at": "2021-06-15 21:24:29"
+    },
+    {
+      "uuid": "2bd25fc4ed37535cb87290c301495e6e",
+      "puuid": "1ac1038cc64ffe728e19491f7dfeaf26",
+      "title": "final",
+      "filename": "final.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "88c818c2dc174221a9f400915c0d7604": 1,
+        "0476c63fa99e4a998187e5a274bdf1f1": 1,
+        "a54eec112d4e47d8b8028fdda8c2c5b8": 1,
+        "be054f648a3940c1a8ff5b80337d5f18": 1,
+        "f03a17ff6cc643f5ba3d69d2ee8d15b5": 1,
+        "e3efd6e96a9b4378ac182a1e4a101e7f": 3,
+        "d2a010dcc0484ccc83d9fed7def4a156": 1
+      },
+      "BOM": [],
+      "updateTime": 1623841016,
+      "createTime": 1623793461,
+      "histories": [],
+      "created_at": "2021-06-15 22:44:21",
+      "updated_at": "2021-06-16 11:56:56"
+    }
+  ],
+  "sort": [],
+  "title": "rev.1- projecto",
+  "foldername": "rev.1- projecto",
+  "schfilename": "rev.1- projecto.json",
+  "schfilemtime": 1624376500212
+}
