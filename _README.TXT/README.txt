@@ -19,7 +19,7 @@ São usados os seguintes componentes:
 
 Antes de se soldar os componentes ao PCB é necessário trocar a resistência do módulo de carregamento para a desejada de 5kΩ.
 
-Tendo todos os componentes prontos é feita agora a soldagem dos mesmos ao PCB. Foi seguida a seguinte ordem de soldagem:
+Tendo todos os componentes prontos é feita agora a soldagem dos mesmos ao PCB seguindo a esquemática do ficheiro 'schematic.png' da pasta 02_Desenho. Foi seguida a seguinte ordem de soldagem:
 1. Módulo de carregamento
 2. Header de baixo
 3. Buzzer
@@ -30,6 +30,9 @@ Tendo todos os componentes prontos é feita agora a soldagem dos mesmos ao PCB. 
 8. Bateria
 
 Assim a placa eletrónica pode agora ser inserida na caixa desenhada para a consola.
+
+## Alternativa à soldagem na placa eletrónica
+Caso seja desejado a montagem numa breadboard são apenas necessários o Arduino, os interruptores, o ecrã e o buzzer. Estes podem ser conectados aos pinos do Arduino como indicado no ficheiro 'schematic.png' da pasta 02_Desenho.
 
 ## Jogo
 Para a instalação do jogo são necessárias as bibliotecas disponíveis na pasta 03_Implementacao. Estas foram obtidas dos seguintes repositórios:
