@@ -3,7 +3,7 @@
 Este repositório contem o processo de desenvolvimento de uma consola portátil baseada em Arduino, assim como um jogo feito com a biblioteca Arduboy, o DUNG!.
 A seguir estão os passos para a construção da mesma assim como a instalação do jogo.
 
-## Consola
+## Montagem da consola
 
 São usados os seguintes componentes:
 - Arduino Nano
@@ -34,7 +34,7 @@ Assim a placa eletrónica pode agora ser inserida na caixa desenhada para a cons
 ## Alternativa à soldagem na placa eletrónica
 Caso seja desejado a montagem numa breadboard são apenas necessários o Arduino, os interruptores, o ecrã e o buzzer. Estes podem ser conectados aos pinos do Arduino como indicado no ficheiro 'schematic.png' da pasta 02_Desenho.
 
-## Jogo
+## Instalação do jogo
 Para a instalação do jogo são necessárias as bibliotecas disponíveis na pasta 03_Implementacao. Estas foram obtidas dos seguintes repositórios:
 - https://github.com/MLXXXp/Arduboy2
 - https://github.com/MLXXXp/ArduboyTones
