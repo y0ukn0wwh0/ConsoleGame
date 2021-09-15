@@ -50,3 +50,32 @@ As versões aqui disponíveis estão ligeiramente diferentes devido a algumas mu
 
 As bibliotecas são então postas na respetiva diretoria para que o Arduino IDE as importe (geralmente C:\Program Files (x86)\Arduino\libraries).
 Após isto basta fazer upload para o Arduino do ficheiro [game.ino](/03_Implementacao/game/game.ino) com o [sprites.c](/03_Implementacao/game/sprites.c) na mesma pasta. Fica assim a instalação completa.
+
+### Mecânicas
+O jogo tem várias rondas compostas por níveis. O número de níveis em cada ronda vai aumentando ao longo que o jogador progride. Sendo assim o objetivo é completar o maior número de níveis possível.
+
+Em cada nível os inimigos lançam projéteis em direção ao jogador e este tem de refleti-las carregando no botão correspondente no ritmo certo.
+Para além dos inimigos irem ficando mais fortes à medida que o jogador avança, no nível final de cada ronda aparece um inimigo mais forte que os outros, dificultando a progressão do jogador.
+
+No início de uma tentativa são oferecidas ao jogador 3 opções de personagens que têm diferentes caracteristícas:
+|            | Guerreiro | Arqueiro  | Mago      |
+| ---------- | --------- | --------- | --------- |
+| **Vida**   | 6         | 4         | 2         |
+| **Ataque** | 2         | 3         | 4         |
+
+Que também têm diferentes habilidades especiais:
+- **Guerreiro**: Cria um escudo que bloqueia um projétil inimigo
+- **Arqueiro**: Dispara uma flecha que arrasta projéteis inimigos na sua direção. Caso acerte o inimigo diretamente causa o dobro do dano.
+- **Mago**: Atira um projétil que recupera um ponto de vida caso atinja o inimigo. Em caso contrário, o mago fica incapacitado de atacar durante 2 segundos.
+
+Existem também vários itens por vezes dados ao jogador aleatóriamente depois de uma ronda terminada. Estes itens podem ser:
+- **Armas**: Adicionam dano ao ataque do jogador. Estas armas dão mais dano quanto maior o seu nível.
+- **Gemas**: Existindo vários tipos de gema, estas duplicam o dano do jogador caso a gema corresponda ao tipo de inimigo.
+- **Poção**: Recupera um ponto de vida quando usada.
+
+### Controlos
+Os três botões da consola têm as seguintes funções:
+|           | Botão A               | Botão B              | Botão C                     |
+| --------- | --------------------- | -------------------- | --------------------------- |
+| **Menus** | Mover para a esquerda | Selecionar/Confirmar | Mover para a direita/Voltar |
+| **Jogo**  | Refletir projéteis    | Utilizar poção       | Usar ataque especial        |
