@@ -79,3 +79,11 @@ Os três botões da consola têm as seguintes funções:
 | --------- | --------------------- | -------------------- | --------------------------- |
 | **Menus** | Mover para a esquerda | Selecionar/Confirmar | Mover para a direita/Voltar |
 | **Jogo**  | Refletir projéteis    | Utilizar poção       | Usar ataque especial        |
+
+### Interface
+<img src="/04_Teste/capturas%20do%20jogo/interface.png" width="600">
+
+### Ecrãs
+<img src="/04_Teste/capturas%20do%20jogo/title_screen.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/choose_hero.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/game.png" width="300">
+<img src="/04_Teste/capturas%20do%20jogo/monster_defeated.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/round_won.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/equip_item.png" width="300">
+<img src="/04_Teste/capturas%20do%20jogo/new_highscore.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/game_over.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/highscores.png" width="300">
