@@ -1,7 +1,7 @@
 # Consola de jogo portátil
 
 Este repositório contem o processo de desenvolvimento de uma consola portátil baseada em Arduino, assim como um jogo feito com a biblioteca Arduboy, o DUNG!.
-A seguir estão os passos para a construção da mesma assim como a instalação do jogo.
+A seguir estão os passos para a construção da mesma, a instalação do jogo e uma descrição breve do mesmo.
 
 ## Montagem da consola
 
