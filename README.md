@@ -74,13 +74,13 @@ There are also various items given to the player randomly after a finished round
 - **Potions**: Heals 1 health point when used.
 The player can only hold two items but they can be switched if another one is found. Note that the item that is switched out is lost.
 
-The gem types that correspond to the enemy types are:
-- Normal
-- Forest
-- Fire
+The following image showcases the different bosses correpondent to the enemy/gem types in this order:
 - Swamp
-- Ancient
 - Undead
+- Ancient
+- Fire
+- Forest
+- Normal
 <img src="/Showcase/screenshots/enemy_bosses.png" width="600">
 
 ### Controls
