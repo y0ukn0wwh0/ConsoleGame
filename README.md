@@ -72,6 +72,16 @@ There are also various items given to the player randomly after a finished round
 - **Weapons**: Add attack damage to the player. Weapons give more damage depending on their level.
 - **Gems**: There are several types of gems and they duplicate the damage the player inflicts if they correspond to the type of enemy.
 - **Potions**: Heals 1 health point when used.
+The player can only hold two items but they can be switched if another one is found. Note that the item that is switched out is lost.
+
+The gem types that correspond to the enemy types are:
+- Normal
+- Forest
+- Fire
+- Swamp
+- Ancient
+- Undead
+<img src="/Showcase/screenshots/enemy_bosses.png" width="600">
 
 ### Controls
 The console's three buttons have the following functions:
