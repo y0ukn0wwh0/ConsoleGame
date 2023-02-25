@@ -15,7 +15,7 @@ The following components are used:
 - i2c OLED screen, 0.96 inches, with the ssd1306 chip
 - 5V buzzer, 12mm diameter
 - 2 headers, 15 pins each (Arduino Nano)
-- Our custom PCB
+- Our custom PCB (you can download the files [here](/Console/pcb_dev.zip) and upload them to EasyEDA)
 
 Before welding the components to the PCB it is necessary to switch the charging module resisor to the 5kΩ one.
 
