@@ -1,3 +1,2 @@
-Nesta pasta está o documento de design do jogo desenvolvido em paralelo com o projeto.
-Estão também as esquemáticas do circuito, do pcb e montagem numa breadboard.
-Na pasta 'caixa' estão todos os ficheiros de desenho da caixa desenvolvidos no SolidWorks, assim como uma imagem PNG.
+This folder holds the schematics of the eletronic circuit and the pcb as well as the breadboard assembly.
+In the 'console box' folder are all the files of the box design made in SolidWorks, along with a PNG image showcasing the box model.

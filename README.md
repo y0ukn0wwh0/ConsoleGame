@@ -19,7 +19,7 @@ The following components are used:
 
 Before welding the components to the PCB it is necessary to switch the charging module resisor to the 5kΩ one.
 
-Having acquired all the required components one can procees with their welding to the PCB following the [schematic](/02_Desenho/circuito.png). The following welding order is advised:
+Having acquired all the required components one can procees with their welding to the PCB following the [schematic](/Console/schematic.png). The following welding order is advised:
 1. Charging module
 2. Bottom header
 3. Buzzer
@@ -29,16 +29,16 @@ Having acquired all the required components one can procees with their welding t
 7. 3 switches
 8. Battery
 
-<img src="/04_Teste/solda_feita.png" height="300">
+<img src="/Showcase/welding_done.png" height="300">
 
 With all the components in place, the board can be set in the box.
 
-<img src="/04_Teste/caixa.jpg" height="300">
+<img src="/Showcase/box.jpg" height="300">
 
 ## Alternative to the PCB welding
 If one wants a simple setup, the assembly can be done on a breadboard. In this case the only components needed are the Arduino, switches, screen and buzzer. These can be connected to the Arduino pins following the image:
 
-<img src="/02_Desenho/breadboard.png" height="300">
+<img src="/Console/breadboard.png" height="300">
 
 ## Game
 To install the game, the libraries available in the ... folder are necessary. These were obtained from the following repositories:
@@ -49,7 +49,7 @@ To install the game, the libraries available in the ... folder are necessary. Th
 The versions available in this repository were slightly altered due to some needed changes like the modification of the button pins.
 
 These libraries are then placed in the correct directory so that the Arduino IDE imports them (generally 'C:\Program Files (x86)\Arduino\libraries').
-After this you can simply upload the [game.ino](/03_Implementacao/game/game.ino) file to the Arduino with the [sprites.c](/03_Implementacao/game/sprites.c) file in the same folder. The installation is now complete.
+After this you can simply upload the [game.ino](/Game/game/game.ino) file to the Arduino with the [sprites.c](/Game/game/sprites.c) file in the same folder. The installation is now complete.
 
 ### Mechanics
 The game has various rounds each containing various levels. The number of levels in each round is increased as the player progresses. The objective is simply to complete as most levels as you can.
@@ -81,9 +81,9 @@ The console's three buttons have the following functions:
 | **Game**  | Reflect projectiles    | Use potion            | Use special attack           |
 
 ### Interface
-<img src="/04_Teste/capturas%20do%20jogo/interface.png" width="600">
+<img src="/Showcase/screenshots/interface.png" width="600">
 
 ### Screens
-<img src="/04_Teste/capturas%20do%20jogo/title_screen.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/choose_hero.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/game.png" width="300">
-<img src="/04_Teste/capturas%20do%20jogo/monster_defeated.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/round_won.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/equip_item.png" width="300">
-<img src="/04_Teste/capturas%20do%20jogo/new_highscore.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/game_over.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/highscores.png" width="300">
+<img src="/Showcase/screenshots/title_screen.png" width="300">  <img src="/Showcase/screenshots/choose_hero.png" width="300">  <img src="/Showcase/screenshots/game.png" width="300">
+<img src="/Showcase/screenshots/monster_defeated.png" width="300">  <img src="/Showcase/screenshots/round_won.png" width="300">  <img src="/Showcase/screenshots/equip_item.png" width="300">
+<img src="/Showcase/screenshots/new_highscore.png" width="300">  <img src="/Showcase/screenshots/game_over.png" width="300">  <img src="/Showcase/screenshots/highscores.png" width="300">
