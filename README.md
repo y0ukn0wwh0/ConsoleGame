@@ -1,89 +1,89 @@
-# Consola de jogo portátil
+# Portable Gaming Console
 
-Este repositório contem o processo de desenvolvimento de uma consola portátil baseada em Arduino, assim como um jogo feito com a biblioteca Arduboy, o DUNG!.
-A seguir estão os passos para a construção da mesma, a instalação do jogo e uma descrição breve do mesmo.
+This repository contains the development process of a portable gaming console based on Arduino, as well as 'DUNG!', a game made with the Arduboy library.
+The following paragraphs detail the steps to the building of the console, the game installation and a brief description of it.
 
-## Montagem da consola
+## Console Assembly
 
-São usados os seguintes componentes:
+The following components are used:
 - Arduino Nano
-- 3 interruptores PTS636 de 2.5mm de altura
-- Interruptor deslizante MSK12C01-07
-- Bateria 601730 de 250mAh com dimensões 6*17*30mm
-- Módulo de carregamento TP4056
-- Resistência SMD de 5kΩ 
-- Ecrã OLED i2c de 0.96 polegadas com o chip ssd1306
-- Buzzer de 5V, 12mm de diâmetro
-- 2 headers cada um com capacidade para 15 pinos (do Arduino Nano)
-- O nosso PCB
+- 3 PTS636 switches, 2.5mm height
+- MSK12C01-07 slide switch
+- 601730 battery, 250mAh, 6*17*30mm dimensions
+- TP4056 charging module
+- 5kΩ SMD resistor
+- i2c OLED screen, 0.96 inches, with the ssd1306 chip
+- 5V buzzer, 12mm diameter
+- 2 headers, 15 pins each (Arduino Nano)
+- Our custom PCB
 
-Antes de se soldar os componentes ao PCB é necessário trocar a resistência do módulo de carregamento para a desejada de 5kΩ.
+Before welding the components to the PCB it is necessary to switch the charging module resisor to the 5kΩ one.
 
-Tendo todos os componentes prontos é feita agora a soldagem dos mesmos ao PCB seguindo a [esquemática](/02_Desenho/circuito.png). Foi seguida a seguinte ordem de soldagem:
-1. Módulo de carregamento
-2. Header de baixo
+Having acquired all the required components one can procees with their welding to the PCB following the [schematic](/02_Desenho/circuito.png). The following welding order is advised:
+1. Charging module
+2. Bottom header
 3. Buzzer
-4. Ecrã
-5. Interruptor deslizante
-6. Header de cima
-7. 3 interruptores
-8. Bateria
+4. Screen
+5. Sliding switch
+6. Top header
+7. 3 switches
+8. Battery
 
 <img src="/04_Teste/solda_feita.png" height="300">
 
-Assim a placa eletrónica pode agora ser inserida na caixa desenhada para a consola.
+With all the components in place, the board can be set in the box.
 
 <img src="/04_Teste/caixa.jpg" height="300">
 
-## Alternativa à soldagem na placa eletrónica
-Caso seja desejado a montagem numa breadboard são apenas necessários o Arduino, os interruptores, o ecrã e o buzzer. Estes podem ser conectados aos pinos do Arduino como indicado na seguinte imagem.
+## Alternative to the PCB welding
+If one wants a simple setup, the assembly can be done on a breadboard. In this case the only components needed are the Arduino, switches, screen and buzzer. These can be connected to the Arduino pins following the image:
 
 <img src="/02_Desenho/breadboard.png" height="300">
 
-## Jogo
-Para a instalação do jogo são necessárias as bibliotecas disponíveis na pasta 03_Implementacao. Estas foram obtidas dos seguintes repositórios:
+## Game
+To install the game, the libraries available in the ... folder are necessary. These were obtained from the following repositories:
 - [Arduboy2](https://github.com/MLXXXp/Arduboy2)
 - [ArduboyTones](https://github.com/MLXXXp/ArduboyTones)
 - [ArdBitmap](https://github.com/igvina/ArdBitmap)
 
-As versões aqui disponíveis estão ligeiramente diferentes devido a algumas mudanças necessárias como a alteração dos pinos dos botões.
+The versions available in this repository were slightly altered due to some needed changes like the modification of the button pins.
 
-As bibliotecas são então postas na respetiva diretoria para que o Arduino IDE as importe (geralmente C:\Program Files (x86)\Arduino\libraries).
-Após isto basta fazer upload para o Arduino do ficheiro [game.ino](/03_Implementacao/game/game.ino) com o [sprites.c](/03_Implementacao/game/sprites.c) na mesma pasta. Fica assim a instalação completa.
+These libraries are then placed in the correct directory so that the Arduino IDE imports them (generally 'C:\Program Files (x86)\Arduino\libraries').
+After this you can simply upload the [game.ino](/03_Implementacao/game/game.ino) file to the Arduino with the [sprites.c](/03_Implementacao/game/sprites.c) file in the same folder. The installation is now complete.
 
-### Mecânicas
-O jogo tem várias rondas compostas por níveis. O número de níveis em cada ronda vai aumentando ao longo que o jogador progride. Sendo assim o objetivo é completar o maior número de níveis possível.
+### Mechanics
+The game has various rounds each containing various levels. The number of levels in each round is increased as the player progresses. The objective is simply to complete as most levels as you can.
 
-Em cada nível os inimigos lançam projéteis em direção ao jogador e este tem de refleti-las carregando no botão correspondente no ritmo certo.
-Para além dos inimigos irem ficando mais fortes à medida que o jogador avança, no nível final de cada ronda aparece um inimigo mais forte que os outros, dificultando a progressão do jogador.
+In each level, enemies launch projectiles in the direction of the player. In turn, the player has to reflect them by pressing the corresponding button in the right rythm.
+Beyond the enemies getting stronger as the game moves forward, at the final level of each round a boss enemy shows up, making the progression more difficult.
 
-No início de uma tentativa são oferecidas ao jogador 3 opções de personagens que têm diferentes caracteristícas:
-|            | Guerreiro | Arqueiro  | Mago      |
-| ---------- | --------- | --------- | --------- |
-| **Vida**   | 6         | 4         | 2         |
-| **Ataque** | 2         | 3         | 4         |
+At the beginning of each attempt, the following characters are offered as a choice to the player:
+|            | Warrior | Archer  | Mage      |
+| ---------- | ------- | ------- | --------- |
+| **Health** | 6       | 4       | 2         |
+| **Attack** | 2       | 3       | 4         |
 
-Que também têm diferentes habilidades especiais:
-- **Guerreiro**: Cria um escudo que bloqueia um projétil inimigo
-- **Arqueiro**: Dispara uma flecha que arrasta projéteis inimigos na sua direção. Caso acerte o inimigo diretamente causa o dobro do dano.
-- **Mago**: Atira um projétil que recupera um ponto de vida caso atinja o inimigo. Em caso contrário, o mago fica incapacitado de atacar durante 2 segundos.
+These also have different special abilities:
+- **Warrior**: Creates a shield that blocks an enemy projectile.
+- **Archer**: Shoots an arrow that drags enemy projectiles in it's direction. In case it hits an enemy directly it inflicts twice the damage.
+- **Mage**: Shoots a projectile that heals 1 health point if it hits an enemy. If it doesn't, the mage is unable to attack for 2 seconds. 
 
-Existem também vários itens por vezes dados ao jogador aleatóriamente depois de uma ronda terminada. Estes itens podem ser:
-- **Armas**: Adicionam dano ao ataque do jogador. Estas armas dão mais dano quanto maior o seu nível.
-- **Gemas**: Existindo vários tipos de gema, estas duplicam o dano do jogador caso a gema corresponda ao tipo de inimigo.
-- **Poção**: Recupera um ponto de vida quando usada.
+There are also various items given to the player randomly after a finished round. These items can be:
+- **Weapons**: Add attack damage to the player. Weapons give more damage depending on their level.
+- **Gems**: There are several types of gems and they duplicate the damage the player inflicts if they correspond to the type of enemy.
+- **Potions**: Heals 1 health point when used.
 
-### Controlos
-Os três botões da consola têm as seguintes funções:
-|           | Botão A               | Botão B              | Botão C                     |
-| --------- | --------------------- | -------------------- | --------------------------- |
-| **Menus** | Mover para a esquerda | Selecionar/Confirmar | Mover para a direita/Voltar |
-| **Jogo**  | Refletir projéteis    | Utilizar poção       | Usar ataque especial        |
+### Controls
+The console's three buttons have the following functions:
+|           | A Button               | B Button              | C Button                     |
+| --------- | ---------------------- | --------------------- | ---------------------------- |
+| **Menus** | Move to the left       | Select/Confirm        | Move to the right/Return     |
+| **Game**  | Reflect projectiles    | Use potion            | Use special attack           |
 
 ### Interface
 <img src="/04_Teste/capturas%20do%20jogo/interface.png" width="600">
 
-### Ecrãs
+### Screens
 <img src="/04_Teste/capturas%20do%20jogo/title_screen.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/choose_hero.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/game.png" width="300">
 <img src="/04_Teste/capturas%20do%20jogo/monster_defeated.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/round_won.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/equip_item.png" width="300">
 <img src="/04_Teste/capturas%20do%20jogo/new_highscore.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/game_over.png" width="300">  <img src="/04_Teste/capturas%20do%20jogo/highscores.png" width="300">
