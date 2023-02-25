@@ -63,7 +63,7 @@ At the beginning of each attempt, the following characters are offered as a choi
 | **Health** | 6       | 4       | 2         |
 | **Attack** | 2       | 3       | 4         |
 
-These also have different special abilities:
+By successfully reflecting enemy projectiles the player wins 'special points'. After accumulating 6 of these points, the player can use the character's special ability:
 - **Warrior**: Creates a shield that blocks an enemy projectile.
 - **Archer**: Shoots an arrow that drags enemy projectiles in it's direction. In case it hits an enemy directly it inflicts twice the damage.
 - **Mage**: Shoots a projectile that heals 1 health point if it hits an enemy. If it doesn't, the mage is unable to attack for 2 seconds. 
